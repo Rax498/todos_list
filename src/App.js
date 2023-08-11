@@ -41,7 +41,7 @@ function App() {
   //------------------------------- adding to the list
   const addTodo = (title, desc) => {
     let sno;
-    if (todos.length == 0) {
+    if (todos.length === 0) {
       sno = 1;
     } else {
       sno = todos[todos.length - 1].sno + 1;
@@ -60,9 +60,17 @@ function App() {
   return (
     <div>
       <Headder clearTodo={clearTodo} />
-      <AddTodo addTodo={addTodo} />
+
       <Routes>
-        <Route path="/" element={<Todos todos={todos} onDelete={onDelete} />} />
+        <Route
+          path="/"
+          element={
+            <div>
+              <AddTodo addTodo={addTodo} />
+              <Todos todos={todos} onDelete={onDelete} />
+            </div>
+          }
+        />
         <Route
           path="/:searchterm"
           element={<SearchFeed todos={todos} onDelete={onDelete} />}

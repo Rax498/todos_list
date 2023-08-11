@@ -14,6 +14,9 @@ export const SearchFeed = ({ todos, onDelete }) => {
 
   return (
     <div className="todolist">
+      <h3 style={{ color: "green", paddingTop: "4px" }}>
+        Your search results..
+      </h3>
       {filteredTodos.map((todo) => {
         return <TodoItem todo={todo} key={todo.sno} onDelete={onDelete} />;
       })}

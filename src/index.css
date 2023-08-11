@@ -20,7 +20,7 @@ code {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .todolist {
-  min-height: 37vh;
+  min-height: 80vh;
   text-align: center;
   padding: 5px;
 }
